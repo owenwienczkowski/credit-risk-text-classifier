@@ -1,0 +1,28 @@
+# My Kaggle API Key
+.kaggle/
+.kaggle/kaggle.json
+
+# Other unnecessary environment variables
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore local virtual environments if added later
+# venv/
+# env/
+
+# Raw data files (downloadable through setup script)
+data/raw/
+# Processed data (can be replicated through data proccecssing script after downloading the raw data)
+data/processed/
+# Trained model weights and tokenizer files (large and reproducible)
+# These may be generated locally or saved after fine-tuning a Hugging Face model
+models/
+# Evaluation outputs, intermediate results, plots, logs, etc.
+# Not needed for reproducibility and can be recreated
+outputs/
+
+# VS Code configs nonessential
+.vscode/
