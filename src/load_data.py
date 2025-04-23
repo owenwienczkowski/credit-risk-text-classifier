@@ -1,6 +1,5 @@
 import kagglehub
 from pathlib import Path
-import shutil
 
 # Download latest version
 def download_raw_data():
@@ -18,6 +17,8 @@ def download_raw_data():
         print("Overwriting existing raw data...")  
 
     # Write data into target location
-    shutil.copy(source_file,target)
-    
+    with open(source_file, "r") as infile, open(target, "w") as outfile:
+        data = infile.read()
+        outfile.write(data)
+        
     return target
