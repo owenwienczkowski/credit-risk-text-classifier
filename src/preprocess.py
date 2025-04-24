@@ -38,7 +38,7 @@ def clean(path):
     df.to_csv(target, index=False)
 
     # Show data location
-    print("Path to cleaned dataset:", target)
+    # print("Path to cleaned dataset:", target)
     
     return df
 
@@ -75,8 +75,8 @@ def split_data(df):
     y_test = test_df['loan_status']
 
     # verify splits
-    print(y_train.value_counts(normalize=True))
-    print(y_test.value_counts(normalize=True))
+    # print(y_train.value_counts(normalize=True))
+    # print(y_test.value_counts(normalize=True))
 
     # test identical number of features and entries
     assert x_train.shape[1] == x_test.shape[1], "Mismatch in feature columns between train and test!"

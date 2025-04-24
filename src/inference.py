@@ -6,6 +6,9 @@ def test_logistic_regression(x_test):
 def test_random_forest(x_test):
     return test_model("models/random_forest_pipe.pkl", x_test)
 
+def test_gradient_boost(x_test):
+    return test_model("models/gradient_boost_pipe.pkl", x_test)
+
 def test_model(path, x_test):
     pipe = joblib.load(path)
     y_pred = pipe.predict(x_test)
