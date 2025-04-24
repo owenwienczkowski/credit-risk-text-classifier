@@ -9,5 +9,5 @@ if __name__ == "__main__":
         clean_data = clean(raw_data)
         x_train, y_train, x_test, y_test = split_data(clean_data)
         logistic_regression_model = train_logistic_regression(x_train, y_train)
-        y_pred = test_logistic_regression(x_test)
-        evaluate_model(y_pred=y_pred, y_test=y_test)
+        y_pred, y_prob = test_logistic_regression(x_test)
+        evaluate_model(y_pred=y_pred, y_test=y_test, y_prob=y_prob, model_name="log_reg")
