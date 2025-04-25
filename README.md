@@ -17,6 +17,24 @@ Modularized for clarity and extensibility:
 - `inference.py`: Loads saved models for prediction
 - `scripts/run_pipeline.py`: Executes the full end-to-end workflow
 
+## Data Preprocessing
+Key data cleaning and feature engineering steps include:
+
+- **Missing Values:**  
+  - Imputed missing employment length with `0` and flagged with a separate binary indicator  
+  - Dropped rows missing loan interest rates due to contextual inconsistency
+
+- **Outlier Removal:**  
+  - Removed unrealistic ages (>122)  
+  - Excluded records indicating employment before age 13
+
+- **Feature Encoding:**  
+  - One-hot encoded nominal features (`person_home_ownership`, `loan_intent`, `cb_person_default_on_file`)  
+  - Ordinally encoded `loan_grade` (`A`–`G` → 1–7)
+
+- **Stratified Sampling:**  
+  - Ensured class distribution was preserved in training and testing sets
+
 ## Models Implemented
 - Logistic Regression
 - Random Forest
