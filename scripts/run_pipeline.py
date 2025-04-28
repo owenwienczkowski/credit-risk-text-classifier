@@ -23,12 +23,13 @@ if __name__ == "__main__":
         evaluate_model(y_pred=y_pred_rf, y_test=y_test, y_prob=y_prob_rf, model_name="random_forest")
 
         # gradient boost model
-        gradient_boost_model = train_gradient_boost(x_train, y_train, n_estimators=300,
-                learning_rate=0.05,
-                max_depth=4,
-                subsample=0.8,
+        gradient_boost_model = train_gradient_boost(x_train, y_train, n_estimators=500, 
+                learning_rate=0.05,     
+                max_depth=5,    
+                subsample=1,  
                 min_samples_split=10,
-                min_samples_leaf=5,
+                min_samples_leaf=1,     
+                max_features=None,
                 random_state=2025)
         y_pred_gb, y_prob_gb = test_gradient_boost(x_test)
         evaluate_model(y_pred=y_pred_gb, y_test=y_test, y_prob=y_prob_gb, model_name="gradient_boost")
