@@ -47,4 +47,3 @@ def evaluate_model(y_test, y_pred, y_prob, model_name="model"):
     plt.legend()
     plt.show()
     fig.savefig(f"outputs/precision_recall_curve_{model_name}.png")
-
