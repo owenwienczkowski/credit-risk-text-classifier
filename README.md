@@ -48,6 +48,7 @@ Key data cleaning and feature engineering steps include:
 ## Outputs
 - Trained models saved to `/models/`
 - Evaluation plots saved to `/outputs/`
+  - ![confusion_matrix_gradient_boost](https://github.com/user-attachments/assets/5c059392-9abf-4c0a-ba32-e793cb499282)
   - ![ROC_Curve_gradient_boost](https://github.com/user-attachments/assets/9538224b-7d48-4ecd-a93e-2b46246674d5)
   - ![precision_recall_curve_gradient_boost](https://github.com/user-attachments/assets/6abe63cf-09f2-46ef-8055-045f55fb2475)
 
